@@ -1,34 +1,32 @@
 # напиши тут код для другого екрана програми
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout, QLineEdit, QHBoxLayout
+from instr import *
 
 app1 = QApplication([])
 main_win1 = QWidget()
-main_win1.setWindowTitle("Здоров'я")
+main_win1.setWindowTitle(txt_title)
 main_win1.move(900, 70)
 main_win1.resize(1000, 600)
 layout1 = QVBoxLayout()
 layout2 = QVBoxLayout()
 main_layout = QHBoxLayout()
 
-text1 = QLabel("Введіть П.І.Б.:")
-PIB_input = QLineEdit("П.І.Б.")
-text2 = QLabel("Пвних років:")
-age_input = QLineEdit("0")
-text3 = QLabel("Ляжте на спину і заміряйте пульс за 15с. Натисніть на копку 'Почати перший тест', щоб запустити "
-               "таймер. \n Результат запишіть у відповідне поле.")
-first_button = QPushButton("Почати перший тест")
-first_pulse_input = QLineEdit("0")
-text4 = QLabel("Виконайте 30 присідань за 45с. Для цього натисніть на кнопку 'Почати робити присідання', щоб запустити "
-               "лічильник присідань.")
-second_button = QPushButton("Почати робити присідання")
-text5 = QLabel("Лягте на спину і заміряйте пульс спочатку за перші 15с хвилини, потім за останні 15с хвилини без виміру"
-               " пульсацій. Результати запишіть у відповідні поля")
-final_button = QPushButton("Почати фінальний тест")
-second_pulse_input = QLineEdit("0")
-final_pulse_input = QLineEdit("0")
-next_button = QPushButton("Надіслати результати")
-timer = QLabel()
+text1 = QLabel(txt_name)
+PIB_input = QLineEdit(txt_hintname)
+text2 = QLabel(txt_age)
+age_input = QLineEdit(txt_hintage)
+text3 = QLabel(txt_test1)
+first_button = QPushButton(txt_starttest1)
+first_pulse_input = QLineEdit(txt_hinttest1)
+text4 = QLabel(txt_test2)
+second_button = QPushButton(txt_starttest2)
+text5 = QLabel(txt_test3)
+final_button = QPushButton(txt_starttest3)
+second_pulse_input = QLineEdit(txt_hinttest2)
+final_pulse_input = QLineEdit(txt_hinttest3)
+next_button = QPushButton(txt_sendresults)
+timer = QLabel(txt_timer)
 
 layout1.addWidget(text1, alignment=Qt.AlignLeft)
 layout1.addWidget(PIB_input, alignment=Qt.AlignLeft)
@@ -44,6 +42,10 @@ layout1.addWidget(first_button, alignment=Qt.AlignLeft)
 layout1.addWidget(second_pulse_input, alignment=Qt.AlignLeft)
 layout1.addWidget(final_pulse_input, alignment=Qt.AlignLeft)
 layout1.addWidget(next_button, alignment=Qt.AlignCenter)
+layout2.addWidget(timer)
 main_layout.addLayout(layout1)
+main_layout.addLayout(layout2)
 main_win1.setLayout(main_layout)
 
+main_win1.show()
+app1.exec_()

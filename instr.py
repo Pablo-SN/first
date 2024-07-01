@@ -37,6 +37,7 @@ txt_starttest3 = 'Почати фінальний тест'
 time = QTime(0, 0, 15)
 txt_timer = time.toString("hh:mm:ss")
 txt_age = 'Повних років:'
+
 txt_finalwin = 'Результати'
 txt_index = "Індекс Рут'є: "
 txt_workheart = 'Працездатність серця: '
