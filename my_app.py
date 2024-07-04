@@ -1,25 +1,15 @@
 # напиши тут код основної програми та першого екрану
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout, QLineEdit
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout, QHBoxLayout, QLineEdit
 
-import second_win, final_win
+from second_win import TestWin
 
 app = QApplication([])
-main_win = QWidget()
-main_win.setWindowTitle("Здоров'я")
-main_win.move(900, 70)
-main_win.resize(1000, 600)
-layout = QVBoxLayout()
 
 
-class TestWin(QWidget):
-    def __init__(self):
-        super.__init__()
-        self.set_appear()
-        self.initUI()
-        self.connects()
-        self.show()
+win2 = TestWin()
+win2.set_appear()
+win2.initUI()
+win2.show()
 
-
-main_win.show()
 app.exec_()
