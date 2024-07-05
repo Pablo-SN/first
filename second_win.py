@@ -56,6 +56,7 @@ class TestWin(QWidget):
         self.l_line.addWidget(text4, alignment=Qt.AlignLeft)
         self.l_line.addWidget(second_button, alignment=Qt.AlignLeft)
         self.l_line.addWidget(text5, alignment=Qt.AlignLeft)
+        self.l_line.addWidget(final_button, alignment=Qt.AlignLeft)
         self.l_line.addWidget(first_button, alignment=Qt.AlignLeft)
         self.l_line.addWidget(second_pulse_input, alignment=Qt.AlignLeft)
         self.l_line.addWidget(final_pulse_input, alignment=Qt.AlignLeft)
