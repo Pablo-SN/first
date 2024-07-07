@@ -1,9 +1,7 @@
 # напиши тут код основної програми та першого екрану
 from PyQt5.QtCore import Qt, QTime, QTimer
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout, QHBoxLayout, QLineEdit
-
 app = QApplication([])
-
 from second_win import *
 
 

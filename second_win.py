@@ -3,7 +3,6 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QWidget, QPushButton, QLabel, QLineEdit, QVBoxLayout, QHBoxLayout
 from instr import *
 from final_win import FinalWin
-
 second_win = QWidget()
 
 
