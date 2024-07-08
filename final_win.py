@@ -8,9 +8,9 @@ from instr import *
 class FinalWin(QWidget):
     def __init__(self):
         super().__init__()
-        self.initUI()  # створюємо та налаштовуємо графічні елементи
-        self.set_appear()  # Встановлює, як виглядатиме вікно (напис, розмір, місце)
-        self.show()  # старт
+        self.initUI()
+        self.set_appear()
+        self.show()
 
     def set_appear(self):
         self.setWindowTitle(txt_finalwin)

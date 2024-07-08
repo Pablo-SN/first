@@ -8,10 +8,10 @@ from second_win import *
 class MainWin(QWidget):
     def __init__(self):
         super().__init__()
-        self.initUI()  # створюємо та налаштовуємо графічні елементи
-        self.connects()  # Встановлює зв'язки між елементами
-        self.set_appear()  # Встановлює, як виглядатиме вікно (напис, розмір, місце)
-        self.show()  # старт
+        self.initUI()
+        self.connects()
+        self.set_appear()
+        self.show()
 
     def set_appear(self):
         self.setWindowTitle(txt_title)
