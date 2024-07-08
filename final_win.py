@@ -6,8 +6,9 @@ from instr import *
 
 
 class FinalWin(QWidget):
-    def __init__(self):
+    def __init__(self, exp):
         super().__init__()
+        self.exp = exp
         self.initUI()
         self.set_appear()
         self.show()
