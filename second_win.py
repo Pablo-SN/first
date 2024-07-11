@@ -7,10 +7,10 @@ from final_win import FinalWin
 
 class Experiment:
     def __init__(self, age, test1, test2, test3):
-        self.age = age
-        self.test1 = test1
-        self.test2 = test2
-        self.test3 = test3
+        self.age = int(age)
+        self.test1 = int(test1)
+        self.test2 = int(test2)
+        self.test3 = int(test3)
 
 
 class TestWin(QWidget):
@@ -41,7 +41,8 @@ class TestWin(QWidget):
         self.second_pulse_input = QLineEdit(txt_hinttest2)
         self.final_pulse_input = QLineEdit(txt_hinttest3)
         self.next_button = QPushButton(txt_sendresults)
-        self.timer = QLabel(txt_timer)
+        self.time = QTime(0, 0, 15)
+        self.timer = QTimer()
 
         self.h_line = QHBoxLayout()
         self.r_line = QVBoxLayout()
@@ -62,15 +63,15 @@ class TestWin(QWidget):
         self.l_line.addWidget(self.second_pulse_input, alignment=Qt.AlignLeft)
         self.l_line.addWidget(self.final_pulse_input, alignment=Qt.AlignLeft)
         self.l_line.addWidget(self.next_button, alignment=Qt.AlignCenter)
-        self.r_line.addWidget(self.timer, alignment=Qt.AlignCenter)
+        self.r_line.addWidget(self.time, alignment=Qt.AlignCenter)
         self.h_line.addLayout(self.l_line)
         self.h_line.addLayout(self.r_line)
         self.setLayout(self.h_line)
 
     def next_click(self):
         self.hide()
-        self.exp = Experiment(self.age_input.text(), self.first_pulse_input, self.second_pulse_input.text(),
-                              self.final_pulse_input)
+        self.exp = Experiment(self.age_input.text(), self.first_pulse_input.text(), self.second_pulse_input.text(),
+                              self.final_pulse_input.text())
         self.fw = FinalWin(self.exp)
 
     def connects(self):
